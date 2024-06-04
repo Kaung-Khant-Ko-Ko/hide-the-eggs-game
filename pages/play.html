@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/play.css" />
+    <title>Hide The Eggs 🥚</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <h1 class="header__title">Hide The Eggs 🥚</h1>
+      <h2 class="header__text">
+        Hide the eggs on the field, and click ready after you have hid your eggs
+      </h2>
+    </header>
+    <main class="main-container">
+      <!-- Hiding the eggs state -->
+      <div class="main__hiding-state">
+        <div class="main__field">
+          <button type="button" id="area_0" class="field__area"></button>
+          <button type="button" id="area_1" class="field__area"></button>
+          <button type="button" id="area_2" class="field__area"></button>
+          <button type="button" id="area_3" class="field__area"></button>
+          <button type="button" id="area_4" class="field__area"></button>
+          <button type="button" id="area_5" class="field__area"></button>
+          <button type="button" id="area_6" class="field__area"></button>
+          <button type="button" id="area_7" class="field__area"></button>
+          <button type="button" id="area_8" class="field__area"></button>
+          <button type="button" id="area_9" class="field__area"></button>
+          <button type="button" id="area_10" class="field__area"></button>
+          <button type="button" id="area_11" class="field__area"></button>
+          <button type="button" id="area_12" class="field__area"></button>
+          <button type="button" id="area_13" class="field__area"></button>
+          <button type="button" id="area_14" class="field__area"></button>
+          <button type="button" id="area_15" class="field__area"></button>
+        </div>
+        <p class="count-message">
+          You have <span id="count" class="count"></span> left to hide
+        </p>
+        <div class="main__message-container">
+          <div class="messages"></div>
+          <div class="message"></div>
+          <div class="message"></div>
+          <div class="message"></div>
+        </div>
+        <button type="button" id="ready-btn" class="main__btn">Ready!</button>
+      </div>
+      <!-- Start playing state -->
+      <div class="main__play-state">
+        <!-- Player field -->
+        <div class="player__field">
+          <button
+            type="button"
+            id="area_0"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_1"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_2"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_3"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_4"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_5"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_6"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_7"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_8"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_9"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_10"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_11"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_12"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_13"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_14"
+            class="player__area"
+            disabled
+          ></button>
+          <button
+            type="button"
+            id="area_15"
+            class="player__area"
+            disabled
+          ></button>
+        </div>
+        <!-- Water field -->
+        <div class="main__water-field">
+          <div class="main__water"></div>
+          <div class="main__water"></div>
+          <div class="main__water"></div>
+          <div class="main__water"></div>
+        </div>
+        <!-- Computer field -->
+        <div class="comp__field">
+          <button type="button" id="area_0" class="comp__area"></button>
+          <button type="button" id="area_1" class="comp__area"></button>
+          <button type="button" id="area_2" class="comp__area"></button>
+          <button type="button" id="area_3" class="comp__area"></button>
+          <button type="button" id="area_4" class="comp__area"></button>
+          <button type="button" id="area_5" class="comp__area"></button>
+          <button type="button" id="area_6" class="comp__area"></button>
+          <button type="button" id="area_7" class="comp__area"></button>
+          <button type="button" id="area_8" class="comp__area"></button>
+          <button type="button" id="area_9" class="comp__area"></button>
+          <button type="button" id="area_10" class="comp__area"></button>
+          <button type="button" id="area_11" class="comp__area"></button>
+          <button type="button" id="area_12" class="comp__area"></button>
+          <button type="button" id="area_13" class="comp__area"></button>
+          <button type="button" id="area_14" class="comp__area"></button>
+          <button type="button" id="area_15" class="comp__area"></button>
+        </div>
+        <p class="result-container">
+          You have found
+          <span id="result__player"></span>
+        </p>
+        <div></div>
+        <p class="result-container">
+          Computer have found
+          <span id="result__comp"></span>
+        </p>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/scripts/play.js"></script>
+  </body>
+</html>
