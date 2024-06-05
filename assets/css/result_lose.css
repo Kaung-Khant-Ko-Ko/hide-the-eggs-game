@@ -17,9 +17,10 @@ body {
 }
 
 .main__title {
-  font-size: 5em;
+  font-size: 10em;
   font-weight: 800;
   text-align: center;
+  color: red;
 }
 
 .main__button-container {
@@ -48,4 +49,3 @@ body {
   text-decoration: none;
   color: white;
 }
-

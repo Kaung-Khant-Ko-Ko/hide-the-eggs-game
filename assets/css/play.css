@@ -5,7 +5,7 @@ body {
   height: 100vh;
   background-color: #5da449;
 
-  font-family: "Dancing Script", cursive;
+  font-family: "Rosarivo", cursive;
   color: white;
 }
 
@@ -15,6 +15,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.header__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 5em;
+  margin: 20px;
+}
+
+.header__text {
+  font-family: "Rosarivo", cursive;
 }
 
 .main-container {
@@ -74,8 +84,6 @@ body {
 .field__area {
   background-image: url("../images/Grass.jpg");
   background-size: 100% 100%;
-
-  font-size: 50px;
 }
 
 .main__message-container {
