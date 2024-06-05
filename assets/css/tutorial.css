@@ -58,11 +58,16 @@ body {
   background-color: #da931e;
   font-family: "Dancing Script", cursive;
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 800;
 
   border: 5px solid #6d5720;
   border-radius: 5px;
 
   text-decoration: none;
   color: white;
+}
+
+.main__button:hover {
+  background-color: #6d5720;
+  border-color: #da931e;
 }

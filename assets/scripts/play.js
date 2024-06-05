@@ -80,6 +80,17 @@ $("#ready-btn").click(function () {
   if (eggs > 0) {
     $("#ready-btn").animate({ left: 10 }, "fast");
     $("#ready-btn").animate({ left: 0 }, "fast");
+
+    let p = setInterval(() => {
+      $(".main__message-container").fadeOut("fast");
+      $(".main__message-container").fadeIn("fast");
+      clearInterval(p);
+    }, 50);
+
+    $(".main__message-container").fadeOut("fast");
+    $(".main__message-container").fadeIn("fast");
+    $(".main__message-container").fadeOut("fast");
+    $(".main__message-container").fadeIn("fast");
   } else {
     for (let l = 0; l < areas.length; l++) {
       if (areas[l].textContent === "🥚") {
@@ -88,7 +99,7 @@ $("#ready-btn").click(function () {
     }
     $(".header__text").text("Search the eggs on the field on the right");
     $(".main__hiding-state").addClass("close-hide-state");
-    $(".main__play-state").css("padding", "0px 50px")
+    $(".main__play-state").css("padding", "0px 50px");
     $(".main__play-state").animate({ width: "100%" });
     for (let m = 0; m < p_areas.length; m++) {
       if (hide_areas.includes("area_" + m)) {

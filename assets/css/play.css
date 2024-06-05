@@ -42,9 +42,6 @@ body {
 
   align-items: center;
   justify-items: center;
-
-  /* width: 0px;
-  overflow: hidden; */
 }
 
 .main__field {
@@ -87,6 +84,7 @@ body {
 }
 
 .main__message-container {
+  position: relative;
   align-self: start;
   width: 25%;
   aspect-ratio: 1 / 2;
@@ -119,20 +117,27 @@ body {
   background-color: hsla(43, 55%, 28%, 0.75);
 }
 
-.main__btn {
+.main__button {
   position: relative;
   grid-column: span 2;
   width: 25%;
+  aspect-ratio: 1 / 0.2;
   text-align: center;
 
   background-color: #da931e;
   font-family: "Dancing Script", cursive;
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 800;
   color: white;
 
   border: 5px solid #6d5720;
   border-radius: 5px;
+}
+
+.main__button:hover {
+  cursor: pointer;
+  background-color: #6d5720;
+  border-color: #da931e;
 }
 
 .count-message {
